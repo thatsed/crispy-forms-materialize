@@ -28,7 +28,7 @@
                         {{ field.label|safe }}{% if field.field.required %}<span class="asterisk"> *</span>{% endif %}
                     </label>
                 {% else %}
-                    <legend {% if field.field.required %}class="required"{% endif %}>
+                    <legend class="{% if field.field.required %}required{% endif %}{% if field.field.value %}active{% endif %}">
                         {{ field.label|safe }}{% if field.field.required %}<span class="asterisk"> *</span>{% endif %}
                     </legend>
                 {% endif %}                
